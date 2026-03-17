@@ -5,15 +5,19 @@ Aplicación de lista de tareas desarrollada en Python utilizando exclusivamente 
 ## Características
 
 - **Estructura de datos**: `Node` y `SinglyLinkedList` con manejo manual de punteros (`next`).
-- **Operaciones**:
+- **Operaciones sobre la lista simplemente enlazada**:
   - Agregar tarea al final de la lista.
-  - Eliminar tarea por nombre (se elimina la primera coincidencia).
-  - Recorrer la lista para mostrar todas las tareas en orden.
+  - Marcar tarea como **pendiente** o **completada** (no se eliminan nodos, solo se actualiza su estado).
+  - Recorrer la lista para obtener todas las tareas y su estado actual.
 - **Interfaz gráfica (GUI)**:
   - Campo de texto para escribir una nueva tarea.
-  - Botón **"Agregar Tarea"**.
-  - Botón **"Eliminar Tarea"** (por nombre; en el modo Tkinter también se puede seleccionar desde la lista).
-  - Área de lista/scroll para visualizar las tareas actuales.
+  - Botón **"Agregar Tarea"** para añadir una nueva tarea con estado **pendiente**.
+  - Botón **"Marcar Completada"**:
+    - En el modo `customtkinter`: se selecciona la tarea haciendo clic sobre ella en la lista y luego se pulsa el botón.
+    - En el modo `tkinter`: se selecciona la tarea en el `Listbox` y luego se pulsa el botón.
+  - Área de lista/scroll para visualizar las tareas actuales en orden, mostrando:
+    - `○` antes del nombre cuando la tarea está **pendiente**.
+    - `✓` antes del nombre cuando la tarea está **completada**.
 - **Tecnología**: Python puro con `customtkinter` (o `tkinter` si `customtkinter` no está disponible).
 
 ## Requisitos
@@ -35,5 +39,5 @@ La ventana de la aplicación se abrirá mostrando:
 - Entrada de texto para la nueva tarea.
 - Botón **"Agregar Tarea"**.
 - Botón **"Marcar Completada"**.
-- Lista de tareas actualizada en tiempo real.
+- Lista de tareas actualizada en tiempo real, con indicadores de estado (`○` / `✓`) y selección de tareas con el ratón.
 
