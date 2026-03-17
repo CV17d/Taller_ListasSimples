@@ -34,6 +34,6 @@ La ventana de la aplicación se abrirá mostrando:
 
 - Entrada de texto para la nueva tarea.
 - Botón **"Agregar Tarea"**.
-- Botón **"Eliminar Tarea"**.
+- Botón **"Marcar Completada"**.
 - Lista de tareas actualizada en tiempo real.
 
